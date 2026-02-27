@@ -1,3 +1,33 @@
+/* 
+TABLE OF CONTENTS
+1.ROOT
+2.RESET
+*/
+
+/* 1. ROOT */
+
+:root{
+  --clr-accent-400: #f25f3a;
+  --clr-accent-100:#ffefeb;
+
+  --clr-primary-400: #242d52;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #000000;
+
+  --ff-primary: "Be Vietnam Pro", sans-serif;
+
+  --ff-body:var(--ff-primary);
+  --ff-heading:var(--ff-primary);
+
+  --fw-regular:400;
+  --fw-semi-bold:500;
+  --fw-bold:700;
+
+}
+
+
+/* 2. RESET */
 /* Box sizing rules */
 *,
 *::before,
@@ -42,18 +72,12 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+svg{
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
