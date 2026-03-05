@@ -17,23 +17,30 @@
 
 <body>
   <!-- HEADER -->
-  <header>
+  <header class="primary-header" id="primary-header">
     <div class="container">
-      <div class="even-columns">
+      <div class="nav-wrapper">
         <!-- logo -->
-        <a href="#" class="logo"><img src="./images/logo/logo.svg" alt=""></a></div>
-      <!-- primary nav -->
-      <nav class="primary-nav" aria-label="primary">
-        <ul class="primary-nav-list" role="list">
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Community</a></li>
-        </ul>
-      </nav>
-      <!-- cta -->
-      <a href="#" class="btn">Get Started</a>
+        <a href="#" class="logo"><img src="./images/logo/logo.svg" alt=""></a>
+        <!-- primary nav -->
+        <!-- mobile nav toggle -->
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" arial-controls="primary navigation ">
+          <img class="icon-hamburger" src="./images/icons/icon-hamburger.svg" alt="">
+          <img class="icon-close" src="./images/icons/icon-close.svg" alt="">
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav class="primary-nav" aria-label="primary" id="primary-navigation" arial-expanded="false">
+          <ul class="primary-nav-list" role="list">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </nav>
+        <!-- cta -->
+        <a href="#" class="header-cta-btn | btn">Get Started</a>
+      </div>
     </div>
   </header>
   <!-- MAIN -->
@@ -67,41 +74,41 @@
             </p>
           </div>
           <ul role="list">
-              <li>
-                <h3 class="fs-500 fw-bold">Track company-wide progress</h3>
-                <p>See how your day-to-day tasks fit into the wider vision. Go from 
-                  tracking progress at the milestone level all the way done to the 
-                  smallest of details. Never lose sight of the bigger picture again.</p>
-              </li>
-              <li>
-                <h3 class="fs-500 fw-bold">Advanced built-in reports</h3>
-                <p>Set internal delivery estimates and track progress toward company 
-                  goals. Our customisable dashboard helps you build out the reports 
-                  you need to keep key stakeholders informed.</p>
-              </li>
-              <li>
-                <h3 class="fs-500 fw-bold">Everything you need in one place</h3>
-                <p>Stop jumping from one service to another to communicate, store files, 
-                  track tasks and share documents. Manage offers an all-in-one team 
-                  productivity solution.</p>
-              </li>
-            </ul>
-          </div>
+            <li>
+              <h3 class="fs-500 fw-bold">Track company-wide progress</h3>
+              <p>See how your day-to-day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way done to the
+                smallest of details. Never lose sight of the bigger picture again.</p>
+            </li>
+            <li>
+              <h3 class="fs-500 fw-bold">Advanced built-in reports</h3>
+              <p>Set internal delivery estimates and track progress toward company
+                goals. Our customisable dashboard helps you build out the reports
+                you need to keep key stakeholders informed.</p>
+            </li>
+            <li>
+              <h3 class="fs-500 fw-bold">Everything you need in one place</h3>
+              <p>Stop jumping from one service to another to communicate, store files,
+                track tasks and share documents. Manage offers an all-in-one team
+                productivity solution.</p>
+            </li>
+          </ul>
         </div>
+      </div>
       </div>
     </section>
     <!-- CTA -->
-     <section class="CTA | padding-block-700 bg-accent-400 text-neutral-100">
+    <section class="CTA | padding-block-700 bg-accent-400 text-neutral-100">
       <div class="container">
         <div class="even-columns">
           <h2 class="fs-secondary-heading fw-bold">Simplify how your team works today.</h2>
           <div><a href="#" class="btn" data-type="inverted">Get Started</a></div>
         </div>
       </div>
-     </section>
+    </section>
   </main>
   <!-- FOOTER -->
-   <footer class="bg-primary-400 padding-block-700">
+  <footer class="bg-primary-400 padding-block-700">
     <div class="contaier">
       <div class="even-columns">
         <div class="text-neutral-100">
@@ -114,34 +121,35 @@
             <li><a href="#" aria-label="linkedin"><img src="./images/icons/icon-linkedin.svg" alt=""></a></li>
           </ul>
         </div>
-          <div>
-            <nav aria-label="footer">
-              <ul role="list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>            
-            </nav>
-          </div>
+        <div>
+          <nav aria-label="footer">
+            <ul role="list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </nav>
+        </div>
         <div>
           <form action="">
             <input type="email" name="footer-email-input" id="footer-email-input" placeholder="Update your inbox...">
-            <input type="submit" value="Go" class="btn"> 
+            <input type="submit" value="Go" class="btn">
           </form>
-            <p class="text-neutral-100">Copyright 2020. All Rights Reserved</p>
+          <p class="text-neutral-100">Copyright 2020. All Rights Reserved</p>
         </div>
       </div>
 
     </div>
-   </footer>
+  </footer>
 
 
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
 
 

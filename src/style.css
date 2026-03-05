@@ -220,15 +220,18 @@ svg {
   font-size: var(--fs-900);
 }
 
-.padding-block-400{
+.padding-block-400 {
   padding-block: var(--size-400);
 }
-.padding-block-700{
+
+.padding-block-700 {
   padding-block: var(--size-700);
 }
-.padding-block-900{
+
+.padding-block-900 {
   padding-block: var(--size-900);
 }
+
 .container {
   --max-width: 1100px;
   --padding-inline: 1rem;
@@ -248,6 +251,17 @@ svg {
   }
 }
 
+.visually-hidden {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* 4. GLOBAL STYLES */
 body {
   font-family: var(--ff-body);
@@ -264,6 +278,93 @@ h6 {
 }
 
 /* 5. COMPONENTS */
+/* Navigation */
+
+.primary-header {
+  padding-block-start: var(--size-700);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.primary-nav-list{
+  display:flex;
+  color:var(--clr-primary-400);
+  gap:clamp(0.1rem,5vw,var(--size-800));
+}
+.primary-nav a{
+    text-decoration: none;      
+    
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-accent-400);
+}
+.mobile-nav-toggle {
+  display: none;
+}
+
+.mobile-nav-toggle .icon-close {
+  display: none;
+}
+
+.header-cta-btn {
+  display: inline-block;
+}
+
+@media(max-width:51em) {
+  .primary-header[data-overlay]::after {
+    content:" ";
+    position: fixed;
+    inset:0;
+    background-image: linear-gradient(rgb(0 0 0 /0), rgb(0 0 0 /0.3));
+  }
+  .header-cta-btn {
+    display: none;
+  }
+
+  .primary-nav {
+    display: none;
+    inset: 7rem var(--size-400) auto;
+    z-index: 100;
+    position: fixed;
+    max-width: 34rem;
+    margin-inline-start: auto;
+    background-color: var(--clr-neutral-100);    
+    text-align: center;
+    padding-block:var(--size-600);
+    border-radius: var(--size-100);
+    box-shadow: 0 0em 1em -0.89em rgba(0,0,0); 
+      }
+  .primary-nav-list{
+    flex-direction: column;
+    gap: var(--size-400);
+  }
+
+  .primary-nav[data-visible] {
+    display: block;
+    
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    top:var(--size-700);
+    right: var(--size-400);
+    z-index: 100;
+    background: transparent;
+    border: none;
+  }
+
+
+}
+
+
+
+/*  Button*/
 .btn {
   cursor: pointer;
   text-decoration: none;
