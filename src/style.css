@@ -243,8 +243,44 @@ p[data-type="wide"]{
 
 }
 
+/*  CTA */
+.cta{
+  position:relative;
+  isolation: isolate;  
+}
+.cta::before{
+  content:' ';
+  position: absolute;
+  z-index: -1;
+  inset:0;
+  background-image: url('../images/misc/bg-tablet-pattern.svg'), url('../images/misc/bg-tablet-pattern.svg');
+  background-repeat: no-repeat ;
+  opacity: 0.07;
+  background-position: -8rem -2rem, 70rem -39rem;
+}
 
+@media(max-width:50em) {
+  .cta::before{
+    background-position: -45rem -3rem, 70rem -39rem;
+  }
+}
+.cta-content-wrapper{
+   text-align: center; 
+}
+.cta-btn-wrapper{
+  justify-self:center;  
+  margin-top: var(--size-600);
+}
 
+@media(min-width:50em) {
+.cta-btn-wrapper{
+  justify-self:end; 
+  margin-top: 0;
+}
+.cta-content-wrapper{
+  text-align: left;  
+}
+}
 /*  Button*/
 .btn {
   cursor:pointer;
@@ -377,6 +413,10 @@ p[data-type="wide"]{
   padding-block: var(--size-700);
 }
 
+.padding-block-800 {
+  padding-block: var(--size-800);
+}
+
 .padding-block-900 {
   padding-block: var(--size-900);
 }
@@ -392,6 +432,9 @@ p[data-type="wide"]{
   display: grid;
   gap: 1.5rem;
 }
+
+
+
 
 @media (min-width: 50em) {
   .even-columns {
@@ -412,4 +455,8 @@ p[data-type="wide"]{
 
 :where(.flow > *:not(:first-child)){  
   margin-top: var(--flow-spacer, 3em);
+}
+
+.vertical-center{
+  align-items: center;
 }
