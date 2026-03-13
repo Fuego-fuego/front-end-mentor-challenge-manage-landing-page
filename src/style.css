@@ -14,10 +14,10 @@ TABLE OF CONTENTS
   --clr-logo-standard:#242D52;
 
   --clr-accent-100: #ffefeb;
-  --clr-accent-200: hsl(12, 60%, 70%);
-  --clr-accent-300: hsl(12, 60%, 65%);
-  --clr-accent-400: hsl(12, 88%, 59%);
-  --clr-accent-500: hsl(12, 76%, 56%);
+  --clr-accent-200: #e09785;
+  --clr-accent-300: #db8670;
+  --clr-accent-400: #f25f3a;
+  --clr-accent-500: #e45c3a;
 
   --clr-primary-100: #242d52a6;
   --clr-primary-400: #242d52;
@@ -244,14 +244,85 @@ p[data-type="wide"]{
     border: none;
   }
 
-
+}
+/* Perks */
+.perks-difference-wrapper{
+  text-align: center;
+  max-width: 40ch;
+}
+@media(min-width:50em) {
+.perks-difference-wrapper{
+  text-align: left;
+  max-width: 45ch;
+}
+}
+.perks-difference-wrapper p {
+  margin-inline: auto;
 }
 
+@media(min-width:50em){
+  .perks-difference-wrapper p {
+  margin-inline:initial ;
+}
+
+}
+.perks-numbered-list-item{  
+  counter-increment: count;
+}
+.perks-numbered-list-item-wrapper::after,
+.perks-numbered-list-item-wrapper::after
+{height:40px ;
+}
+.perks-numbered-list-item-wrapper::before{
+  content: "0" counter(count);
+  font-weight: var(--fw-bold);
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color:var(--clr-accent-100);
+  background-color: var(--clr-accent-400);
+  padding:var(--size-200)var(--size-500);
+  border-radius: 100vw;  
+}
+
+@media(max-width:30em){
+  .perks-numbered-list-item-wrapper::after{
+  --bg:var(--clr-accent-100);
+  
+  content: " ";  
+  z-index: -1;
+  background-color: var(--bg);
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  padding:var(--size-200)var(--size-500);
+  box-shadow: 5em 0 0 var(--bg);
+  border-radius: 100vw;  
+}
+}
+.perks-numbered-list-item-wrapper{
+ display: grid;
+ column-gap:var(--size-200);
+ align-items: center;
+ grid-template-columns: min-content 1fr;
+}
+
+.perks-numbered-list-item-title{
+  grid-column: 2/-1;
+  grid-row: 2/1;
+}
+.perks-numbered-list-item-body{
+  grid-column: 1/-1;
+}
+@media(min-width:50em) {
+  .perks-numbered-list-item-body{
+    grid-column: 2/-1;
+  }
+  
+}
 /*  CTA */
 .cta{
   position:relative;
   isolation: isolate;  
-}
+};
 .cta::before{
   content:' ';
   position: absolute;
@@ -553,6 +624,7 @@ width: fit-content;
 .even-columns {
   display: grid;
   gap: 1.5rem;
+  justify-content: center;  
 }
 
 
