@@ -21,6 +21,7 @@ TABLE OF CONTENTS
 
   --clr-primary-100: #242d52a6;
   --clr-primary-400: #242d52;
+  --clr-primary-800: hsl(232, 12%, 13%);
 
   --clr-neutral-100: #fff;
   --clr-neutral-200: hsl(0, 0%, 98%);
@@ -676,6 +677,11 @@ p[data-type="wide"] {
 .bg-primary-400 {
   background-color: var(--clr-primary-400);
 }
+
+.bg-primary-800 {
+  background-color: var(--clr-primary-800);
+}
+
 
 .bg-neutral-100 {
   background-color: var(--clr-neutral-100);
