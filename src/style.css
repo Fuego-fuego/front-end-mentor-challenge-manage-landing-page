@@ -228,6 +228,7 @@ p[data-type="wide"] {
     content: " ";
     position: fixed;
     inset: 0;
+    z-index: 999;
     background-image: linear-gradient(rgb(0 0 0 /0), rgb(0 0 0 /0.3));
   }
 
@@ -238,7 +239,7 @@ p[data-type="wide"] {
   .primary-nav {
     display: none;
     inset: 7rem var(--size-400) auto;
-    z-index: 100;
+    z-index: 999;
     position: fixed;
     max-width: 34rem;
     margin-inline-start: auto;
