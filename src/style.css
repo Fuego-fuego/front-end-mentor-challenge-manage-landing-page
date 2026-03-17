@@ -213,6 +213,7 @@ p[data-type="wide"] {
 
 .mobile-nav-toggle {
   display: none;
+  
 }
 
 .mobile-nav-toggle .icon-close {
@@ -239,7 +240,7 @@ p[data-type="wide"] {
   .primary-nav {
     display: none;
     inset: 7rem var(--size-400) auto;
-    z-index: 999;
+    z-index: 1000;
     position: fixed;
     max-width: 34rem;
     margin-inline-start: auto;
@@ -265,7 +266,7 @@ p[data-type="wide"] {
     cursor: pointer;
     top: var(--size-700);
     right: var(--size-400);
-    z-index: 100;
+    z-index: 1000;
     background: transparent;
     border: none;
   }
