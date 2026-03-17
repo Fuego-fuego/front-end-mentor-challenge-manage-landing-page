@@ -150,8 +150,6 @@ svg {
   }
 }
 
-
-
 /* =========================== 
 3. GLOBAL STYLES 
 ===========================*/
@@ -286,7 +284,6 @@ p[data-type="wide"] {
   background-image: url('../images/misc/bg-tablet-pattern.svg');
   background-repeat: no-repeat;
   background-position: bottom left;
-
 }
 
 .hero-content-wrapper {
@@ -309,7 +306,6 @@ p[data-type="wide"] {
     order: initial;
   }
 }
-
 
 /*===========================
         Perks 
@@ -424,7 +420,6 @@ p[data-type="wide"] {
 
 }
 
-
 /*===========================
         Slider 
 ===========================*/
@@ -467,7 +462,6 @@ p[data-type="wide"] {
   }
 }
 
-
 .slider-avatar-img {
   --square-size: 3.9rem;
   --width: var(--square-size);
@@ -493,7 +487,6 @@ p[data-type="wide"] {
 .a11y-slider-dots {
   display: flex;
   justify-content: center;
-
 }
 
 .a11y-slider-dots li {
@@ -701,7 +694,6 @@ p[data-type="wide"] {
 .primary-footer-nav a {
   text-decoration: none;
   color: var(--clr-neutral-100);
-
 }
 
 .primary-footer-nav a:is(:hover, :focus-visible) {
@@ -725,11 +717,6 @@ p[data-type="wide"] {
   grid-area: copy-right;
   text-align: center;
 }
-
-
-
-
-
 
 /* =========================== 
 5. UTILITY CLASSES 
@@ -770,7 +757,6 @@ p[data-type="wide"] {
 .bg-primary-800 {
   background-color: var(--clr-primary-800);
 }
-
 
 .bg-neutral-100 {
   background-color: var(--clr-neutral-100);
@@ -830,8 +816,6 @@ p[data-type="wide"] {
   font-size: var(--fs-900);
 }
 
-
-
 .padding-block-400 {
   padding-block: var(--size-400);
 }
@@ -879,8 +863,6 @@ p[data-type="wide"] {
   margin-inline: auto;
 }
 
-
-
 @media (min-width: 50em) {
   .even-columns {
     grid-auto-flow: column;
@@ -890,7 +872,6 @@ p[data-type="wide"] {
   .even-columns>* {
     margin-inline: initial;
   }
-
 }
 
 .visually-hidden {
@@ -924,5 +905,4 @@ p[data-type="wide"] {
   .mx-center-sm {
     margin-inline: auto;
   }
-
 }
