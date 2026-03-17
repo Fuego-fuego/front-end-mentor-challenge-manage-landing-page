@@ -23,6 +23,7 @@ TABLE OF CONTENTS
   --clr-primary-400: #242d52;
 
   --clr-neutral-100: #fff;
+  --clr-neutral-200: hsl(0, 0%, 98%);
   --clr-neutral-900: #000000;
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
@@ -236,7 +237,6 @@ p[data-type="wide"] {
 
   .primary-nav[data-visible] {
     display: block;
-
   }
 
   .mobile-nav-toggle {
@@ -333,13 +333,102 @@ p[data-type="wide"] {
 
 }
 
+/* Slider */
+.a11y-slider,
+.slider {
+  position: relative;
+  overflow: hidden;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.slider {
+  list-style-type: none;
+  display: flex;
+  gap: var(--size-400);
+  border-radius: 2px;
+
+}
+
+
+.slider>* {
+  max-width: 80%;
+  flex: 0 0 auto;  
+  scroll-padding: 10em;
+}
+
+@media (min-width: 30em) {
+  .slider>* {
+    width: 50%;
+  }
+}
+
+@media (min-width: 50em) {
+  .slider>* {
+    width: 32%;
+  }
+}
+
+
+.slider-avatar-img {
+  --square-size: 3.9rem;
+  --width: var(--square-size);
+  --height: var(--square-size);
+
+  position: relative;
+  width: var(--width);
+  margin-inline: auto;
+  inset: 0;
+  top: calc(var(--width)/2);
+}
+
+.slider-content-wrapper {
+  background-color: var(--clr-neutral-200);
+  padding: 3rem 1rem 2rem;
+}
+
+.slider-content-wrapper-p{  
+  margin-inline: auto;  
+}
+
+.a11y-slider-dots {
+    display: flex;
+    justify-content:center;
+
+}
+
+.a11y-slider-dots li {
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin: 0 6px;
+    color: #fff;
+}
+.a11y-slider-dots li button {
+    display: block;
+    background-color:transparent;
+    font-size: 0;
+    text-indent: -9999px;
+    border: 1px solid var(--clr-accent-400);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+ .a11y-slider-dots li button[class="active"] {
+    background-color: var(--clr-accent-400);
+}
 /*  CTA */
 .cta {
   position: relative;
   isolation: isolate;
 }
 
-;
+
 
 .cta::before {
   content: ' ';
