@@ -24,6 +24,7 @@ TABLE OF CONTENTS
 
   --clr-neutral-100: #fff;
   --clr-neutral-200: hsl(0, 0%, 98%);
+  --clr-neutral-400: hsl(0, 0%, 55%);
   --clr-neutral-900: #000000;
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
@@ -187,9 +188,8 @@ p[data-type="wide"] {
 
 }
 
-.nav-list a:hover,
-.nav-list a:focus {
-  color: var(--clr-accent-400);
+.primary-nav-list a:is(:hover,:focus-within) {
+  color: var(--clr-neutral-400);
 }
 
 .mobile-nav-toggle {
@@ -428,8 +428,6 @@ p[data-type="wide"] {
   position: relative;
   isolation: isolate;
 }
-
-
 
 .cta::before {
   content: ' ';
