@@ -267,8 +267,17 @@ p[data-type="wide"] {
     top: var(--size-700);
     right: var(--size-400);
     z-index: 1000;
+    width:2rem;
+    aspect-ratio: 1;
     background: transparent;
+    background-image: url(../images/icons/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
+  }
+  .mobile-nav-toggle[aria-expanded="true"]{
+    /* width:1rem; */
+    background-image: url(../images/icons/icon-close.svg);    
   }
 }
 

@@ -4,10 +4,12 @@ const mobileNavToggle = document.querySelector("#mobile-nav-toggle");
 
 mobileNavToggle.addEventListener("click", () => {
     primaryNav.hasAttribute("data-visible")
-        ? primaryNav.setAttribute("aria-expanded", false)
-        : primaryNav.setAttribute("aria-expanded", true);
+    ? mobileNavToggle.setAttribute("aria-expanded", false)
+    : mobileNavToggle.setAttribute("aria-expanded", true);
     primaryNav.toggleAttribute("data-visible");
     primaryHeader.toggleAttribute("data-overlay");
+
+
 });
 
 const slider = new A11YSlider(document.querySelector(".slider"), {
